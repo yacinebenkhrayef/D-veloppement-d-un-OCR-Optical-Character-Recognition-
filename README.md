@@ -46,3 +46,71 @@ page…)
 • Traitement local ou sur serveur sécurisé 
 • Chiffrement des fichiers sensibles 
 • Authentification des utilisateurs et gestion des rôles
+
+
+
+
+## Sprints détaillés (proposition : 6 sprints)
+
+✅ Sprint 1 : Mise en place (1 semaine)
+
+Installer environnement Python (FastAPI, Tesseract, EasyOCR, Streamlit).
+
+Créer repo projet + structure de dossiers.
+
+Implémenter upload basique (FastAPI ou Streamlit).
+
+Objectif : Uploader un document et afficher son contenu brut en texte via OCR.
+
+✅ Sprint 2 : OCR multilingue (1 semaine)
+
+Intégrer Tesseract FR/AR (gestion sens RTL pour l’arabe).
+
+Tester sur plusieurs types de documents (PDF, JPEG).
+
+Ajouter pré-traitement simple (rotation, contraste).
+
+Objectif : OCR robuste FR/AR sur plusieurs formats.
+
+✅ Sprint 3 : Extraction de données (2 semaines)
+
+Implémenter regex pour CIN, dates, numéros, etc.
+
+Développer pipeline d’extraction → sortie JSON structurée.
+
+Ajouter NER (spaCy FR) pour noms/adresses.
+
+Objectif : Extraire au moins 4 champs (nom, prénom, CIN, date naissance) avec bonne précision.
+
+✅ Sprint 4 : Vérification authenticité basique (1-2 semaines)
+
+Règles de cohérence (ex: date délivrance > date naissance).
+
+Vérifier format du CIN et dates.
+
+Détecter présence cachet/logo par template matching (OpenCV).
+
+Objectif : Rapport de vérification simple (cohérence + flag authentique/non).
+
+✅ Sprint 5 : Interface et exports (1 semaine)
+
+Démo avec Streamlit :
+
+Upload doc → affichage document + texte reconnu.
+
+Visualisation JSON + possibilité de télécharger CSV.
+
+Objectif : Interface fonctionnelle utilisable par un non-technique.
+
+✅ Sprint 6 : Finalisation & rapport (1 semaine)
+
+Sauvegarde historique (fichiers + résultats JSON).
+
+Export complet (CSV, JSON, PDF rapport).
+
+Rédiger rapport technique (pipeline, résultats, limites).
+
+Objectif : Projet complet + prêt pour soutenance/démo.
+
+
+
